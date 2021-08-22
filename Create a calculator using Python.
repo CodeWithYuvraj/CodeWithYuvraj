@@ -1,0 +1,24 @@
+#Hello Guys in this video we will learn to make a calculator
+n1=input("Enter a first number:")
+n2=input("Enter a second number:")
+print("For sum enter:        +")
+print("For difference enter: -")
+print("For product enter:    *")
+print("For division enter:   /")
+op=input("Enter a operation:")
+
+
+if op=="+":
+    print("Sum of these two number is:", float(n1)+float(n2))
+
+elif op=="-":
+    print("Difference of these two number is:", float(n1)-float(n2))   
+
+elif op=="*":
+    print("Product of these two number is:", float(n1)*float(n2)) 
+
+elif op=="/":
+    print("Division of these two number is:", float(n1)/float(n2)) 
+
+else:
+    print("Invalid Input")   
