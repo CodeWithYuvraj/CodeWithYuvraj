@@ -1,0 +1,17 @@
+#Area of circle
+print("Enter a redius of a circle")
+radius=input()
+print("Area of circle=",22/7*float(radius)*float(radius))
+
+#Area of Rectangle
+print("Enter length of rectangle")
+length=input()
+print("Enter breadth of rectangle")
+breadth=input()
+print("Area of Rectangle",float(length)*float(breadth))
+
+#Area of square
+print("Enter a length of rectangle")
+length=input()
+print("Area of square=",float(length)*float(length))
+#Thanks for watching my video
