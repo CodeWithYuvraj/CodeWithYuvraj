@@ -1,0 +1,80 @@
+#Hello guys in this video we will learn to make a GUI calculator
+from tkinter import *
+root=Tk()
+root.geometry("350x450")
+
+def btnclick(number):
+    global operator
+    operator=operator+str(number)
+    scc.set(operator)
+
+
+def clear():
+    global operator
+    operator=""
+    scc.set(operator)
+
+def btnequal():
+    global operator
+    sumup=str(eval(operator))
+    scc.set(sumup)
+    operator=""
+    
+
+operator=""
+scc=StringVar()
+
+sc=Entry(root ,text=scc,font=("Verdena 30"), justify='right')
+sc.pack(side=TOP,expand=True, fill="both")
+
+
+frame1=Frame(root)
+frame1.pack(expand=True, fill="both")
+
+frame2=Frame(root)
+frame2.pack(expand=True, fill="both")
+
+frame3=Frame(root)
+frame3.pack(expand=True, fill="both")
+
+frame4=Frame(root)
+frame4.pack(expand=True, fill="both")
+
+But7=Button(frame1, text="7",command=lambda:btnclick(7) ,font=("Verdana", 22), relief=GROOVE,border=0)
+But7.pack(side=LEFT,expand=True, fill="both")
+But8=Button(frame1, text="8",command=lambda:btnclick(8), font=("Verdana", 22), relief=GROOVE,border=0)
+But8.pack(side=LEFT,expand=True, fill="both")
+But9=Button(frame1, text="9",command=lambda:btnclick(9), font=("Verdana", 22), relief=GROOVE,border=0)
+But9.pack(side=LEFT,expand=True, fill="both")
+Butd=Button(frame1, text="/",command=lambda:btnclick("/"), font=("Verdana", 22), relief=GROOVE,border=0)
+Butd.pack(side=LEFT,expand=True, fill="both")
+
+But4=Button(frame2, text="4",command=lambda:btnclick(4), font=("Verdana", 22), relief=GROOVE,border=0)
+But4.pack(side=LEFT,expand=True, fill="both")
+But5=Button(frame2, text="5",command=lambda:btnclick(5), font=("Verdana", 22), relief=GROOVE,border=0)
+But5.pack(side=LEFT,expand=True, fill="both")
+But6=Button(frame2, text="6",command=lambda:btnclick(6), font=("Verdana", 22), relief=GROOVE,border=0)
+But6.pack(side=LEFT,expand=True, fill="both")
+Butm=Button(frame2, text="*",command=lambda:btnclick("*"), font=("Verdana", 22), relief=GROOVE,border=0)
+Butm.pack(side=LEFT,expand=True, fill="both")
+
+But1=Button(frame3, text="1",command=lambda:btnclick(1), font=("Verdana", 22), relief=GROOVE,border=0)
+But1.pack(side=LEFT,expand=True, fill="both")
+But2=Button(frame3, text="2",command=lambda:btnclick(2), font=("Verdana", 22), relief=GROOVE,border=0)
+But2.pack(side=LEFT,expand=True, fill="both")
+But3=Button(frame3, text="3",command=lambda:btnclick(3), font=("Verdana", 22), relief=GROOVE,border=0)
+But3.pack(side=LEFT,expand=True, fill="both")
+Buts=Button(frame3, text="-",command=lambda:btnclick("-"), font=("Verdana", 22), relief=GROOVE,border=0)
+Buts.pack(side=LEFT,expand=True, fill="both")
+
+Butc=Button(frame4, text="C",command=clear, font=("Verdana", 22), relief=GROOVE,border=0)
+Butc.pack(side=LEFT,expand=True, fill="both")
+But0=Button(frame4, text="0",command=lambda:btnclick(0), font=("Verdana", 22), relief=GROOVE,border=0)
+But0.pack(side=LEFT,expand=True, fill="both")
+Bute=Button(frame4, text="=",command=btnequal, font=("Verdana", 22), relief=GROOVE,border=0)
+Bute.pack(side=LEFT,expand=True, fill="both")
+Butp=Button(frame4, text="+",command=lambda:btnclick("+"), font=("Verdana", 22), relief=GROOVE,border=0)
+Butp.pack(side=LEFT,expand=True, fill="both")
+
+root.mainloop()
+#Thank u
