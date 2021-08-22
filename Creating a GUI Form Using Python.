@@ -1,0 +1,38 @@
+#Hello guys today i am going to make a  gui  form
+from tkinter import*
+root=Tk()
+root.iconbitmap("Foorm.ico")
+root.title("Kanchana Tours and Travels")
+root.geometry("350x250")
+Label(root, text="Kanchana Tours and Travels").grid(row=0,column=2)
+
+def get():
+    print(f"{Name.get()}")
+    print(f"{Age.get()}")
+    print(f"{PhoneNumber.get()}")
+    print(f"{From.get()}")
+    print(f"{To.get()}")
+    with open("valuee.txt", "a") as f:
+        f.write(f"{Name.get(),Age.get(),PhoneNumber.get(),From.get(),To.get()}\n")
+ 
+Label(root,text="Name").grid(row=1,column=0)
+Label(root,text="Age").grid(row=2,column=0)
+Label(root,text="Phone Number").grid(row=3,column=0)
+Label(root,text="From").grid(row=4,column=0)
+Label(root,text="To").grid(row=5,column=0)
+
+Name=StringVar()
+Age=StringVar()
+PhoneNumber=StringVar()
+From=StringVar()
+To=StringVar()
+
+Entry(root, text=Name).grid(row=1,column=2)
+Entry(root, text=Age).grid(row=2,column=2)
+Entry(root, text=PhoneNumber).grid(row=3,column=2)
+Entry(root, text=From).grid(row=4,column=2)
+Entry(root, text=To).grid(row=5,column=2)
+Button(root,text="Submit",command=get).grid(row=6,column=2)
+root.mainloop()
+
+#Please Subscribe My Channel
