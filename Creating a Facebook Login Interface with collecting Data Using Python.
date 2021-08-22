@@ -1,0 +1,29 @@
+#Hello Guys Today i am going to make a facebook login interface 
+from tkinter import *
+
+root = Tk()
+
+root.title("Facebook.com")
+root.iconbitmap("fb.ico")
+
+root.geometry("250x250")
+Label(root, text = "Username").grid(row=0,column=0)
+Label(root, text = "Password").grid(row=1,column=0)
+
+def getvalue():
+    print(f"{uservalue.get()}")
+    print(f"{passvalue.get()}")
+
+
+
+uservalue=StringVar()
+passvalue=StringVar()
+
+Entry(root, text=uservalue).grid(row=0,column=1)
+Entry(root, text=passvalue).grid(row=1,column=1)
+
+Button(root, text = "Login", command=getvalue).grid(row=2,column=0)
+
+root.mainloop()
+
+#Please Like, Share And Susbscribe My Channel
