@@ -1,0 +1,5 @@
+#Hello Guys in this video we will see to convert photo into text
+import pywhatkit
+a=input("Image name:")
+b=input("Output file name:")
+pywhatkit.image_to_ascii_art(a , b)
