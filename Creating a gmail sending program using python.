@@ -1,0 +1,13 @@
+import subprocess, smtplib
+
+def MEH_mail(to, content):
+    server = smtplib.SMTP('smtp.gmail.com', 587)
+    server.ehlo()
+    server.starttls()
+    server.login('Your Gmail', 'Password')
+    server.sendmail("Your Gmail", to, content)
+    server.close()
+
+out = ("Text")
+
+MEH_mail("Your Gmail",out)
